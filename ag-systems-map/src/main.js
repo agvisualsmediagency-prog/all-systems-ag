@@ -89,11 +89,14 @@ function showLogin(msg) { $("#login").classList.remove("hidden"); if (msg) $("#l
 function hideLogin() { $("#login").classList.add("hidden"); }
 $("#loginForm").addEventListener("submit", async e => {
   e.preventDefault();
-  const email = $("#loginEmail").value.trim(); if (!email) return;
-  $("#loginBtn").disabled = true; $("#loginMsg").textContent = "Sending…";
-  const { error } = await supabase.auth.signInWithOtp({ email, options: { emailRedirectTo: window.location.origin } });
+  const email = $("#loginEmail").value.trim(), password = $("#loginPass").value;
+  if (!email || !password) return;
+  $("#loginBtn").disabled = true; $("#loginMsg").textContent = "Signing in…";
+  const { data, error } = await supabase.auth.signInWithPassword({ email, password });
   $("#loginBtn").disabled = false;
-  $("#loginMsg").textContent = error ? "Couldn't send the link: " + error.message : "Check your email and click the link to sign in.";
+  if (error) { $("#loginMsg").textContent = /invalid/i.test(error.message) ? "Wrong email or password." : "Couldn't sign in: " + error.message; return; }
+  $("#loginMsg").textContent = "";
+  if (data && data.session) start(data.session);
 });
 $("#signout").addEventListener("click", async () => { await supabase.auth.signOut(); location.reload(); });
 $("#demoBtn").addEventListener("click", () => { hideLogin(); setStatus("Browsing without signing in — changes aren't saved", "warn"); });
