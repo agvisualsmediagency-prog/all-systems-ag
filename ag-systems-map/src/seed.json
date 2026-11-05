@@ -1,0 +1,2237 @@
+{
+ "rev": 1,
+ "people": [
+  {
+   "id": "andres",
+   "name": "Andres",
+   "role": "Marketing & sales, growth, AI"
+  },
+  {
+   "id": "esteban",
+   "name": "Esteban",
+   "role": "Client communication, shooting, finance"
+  },
+  {
+   "id": "isabella",
+   "name": "Isabella",
+   "role": "PM: retainer ops, production, AG Visuals orders"
+  },
+  {
+   "id": "va",
+   "name": "VA (Mom)",
+   "role": "Prospect research, DMs, CRM"
+  },
+  {
+   "id": "shooter",
+   "name": "Shooter",
+   "role": "On-site capture"
+  },
+  {
+   "id": "editor",
+   "name": "Editors",
+   "role": "Video and photo edits"
+  },
+  {
+   "id": "acct",
+   "name": "Accounting",
+   "role": "Books and taxes"
+  }
+ ],
+ "departments": [
+  {
+   "id": "ms",
+   "code": "M",
+   "name": "Marketing & Sales",
+   "color": "#2b6fe0",
+   "blurb": "Get attention, start conversations, book meetings and close."
+  },
+  {
+   "id": "ops",
+   "code": "O",
+   "name": "Operations & Client Experience",
+   "color": "#7a4de8",
+   "blurb": "Onboard, run the retainer system, report, renew."
+  },
+  {
+   "id": "pm",
+   "code": "P",
+   "name": "Project Management",
+   "color": "#c2367a",
+   "blurb": "AG Visuals one-off projects and retainer production."
+  },
+  {
+   "id": "fin",
+   "code": "F",
+   "name": "Finance & Admin",
+   "color": "#0f8f86",
+   "blurb": "Billing, close & payouts, contracts."
+  },
+  {
+   "id": "co",
+   "code": "C",
+   "name": "Company",
+   "color": "#b07a12",
+   "blurb": "Scoreboard and the AI agents running across AG."
+  }
+ ],
+ "systems": [
+  {
+   "id": "m1",
+   "dept": "ms",
+   "code": "M1",
+   "name": "AG brand content",
+   "short": "Founder-led content that makes contractors want AG.",
+   "cadence": "Monthly",
+   "stages": [
+    {
+     "id": "m1a",
+     "name": "Content loop",
+     "when": "Monthly",
+     "steps": [
+      {
+       "id": "m1-plan",
+       "title": "Plan next month AG posts",
+       "short": "3–5 founder-led posts: proof, results, behind the scenes.",
+       "detail": "Claude drafts ideas from what’s working on AG’s own account and in the contractor niche. Andres picks next month’s posts.",
+       "freq": "monthly",
+       "owners": [
+        "andres"
+       ],
+       "mode": "hybrid",
+       "block": "",
+       "when": "the third tuesday of the month",
+       "tool": "Claude + Notion",
+       "feeds": []
+      },
+      {
+       "id": "m1-shoot",
+       "title": "Film AG content",
+       "short": "Batch-film with Andres and Esteban on camera.",
+       "detail": "",
+       "freq": "15days",
+       "owners": [
+        "esteban",
+        "andres"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "Every other Friday",
+       "tool": "",
+       "feeds": []
+      },
+      {
+       "id": "m1-edit",
+       "title": "Edit AG content",
+       "short": "Cinematic, founder-led style; bold headlines.",
+       "detail": "",
+       "freq": "weekly",
+       "owners": [
+        "isabella",
+        "editor"
+       ],
+       "mode": "hybrid",
+       "block": "",
+       "when": "monday",
+       "tool": "CapCut + Higgsfield",
+       "feeds": []
+      },
+      {
+       "id": "m1-sched",
+       "title": "Schedule posts",
+       "short": "Approved posts go into Metricool at the best times.",
+       "detail": "",
+       "freq": "weekly",
+       "owners": [
+        "isabella"
+       ],
+       "mode": "auto",
+       "block": "",
+       "when": "",
+       "tool": "Metricool",
+       "feeds": []
+      },
+      {
+       "id": "m1-engage",
+       "title": "Reply to comments and DMs",
+       "short": "15 minutes in the morning; leads go to HubSpot.",
+       "detail": "",
+       "freq": "daily",
+       "owners": [
+        "andres"
+       ],
+       "mode": "manual",
+       "block": "morning",
+       "when": "",
+       "tool": "Instagram",
+       "feeds": [
+        "m5-plan"
+       ]
+      },
+      {
+       "id": "m1-review",
+       "title": "Review what worked",
+       "short": "Top posts by leads and profile visits, not views.",
+       "detail": "",
+       "freq": "monthly",
+       "owners": [
+        "andres"
+       ],
+       "mode": "hybrid",
+       "block": "",
+       "when": "1st of the month",
+       "tool": "Metricool + Claude",
+       "feeds": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "m2",
+   "dept": "ms",
+   "code": "M2",
+   "name": "Funnels & ads",
+   "short": "Landing page quiz, AI Visibility Audit and AG's own ads.",
+   "cadence": "Always on + weekly review",
+   "stages": [
+    {
+     "id": "m2a",
+     "name": "Funnel",
+     "when": "Always on",
+     "steps": [
+      {
+       "id": "m2-page",
+       "title": "Landing page + quiz funnel",
+       "short": "Contractors only; ends in booking an in-person meeting.",
+       "detail": "",
+       "freq": "setup",
+       "owners": [
+        "andres"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "",
+       "tool": "AG website",
+       "feeds": []
+      },
+      {
+       "id": "m2-audit",
+       "title": "Free AI Visibility Audit",
+       "short": "Lead magnet: how the contractor shows up on Google and in AI search.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "andres"
+       ],
+       "mode": "hybrid",
+       "block": "",
+       "when": "When someone requests it",
+       "tool": "Claude",
+       "feeds": []
+      },
+      {
+       "id": "m2-ads",
+       "title": "AG ads running",
+       "short": "Founder-led video ads to the landing page.",
+       "detail": "",
+       "freq": "daily",
+       "owners": [
+        "andres"
+       ],
+       "mode": "auto",
+       "block": "",
+       "when": "",
+       "tool": "Meta Ads Manager",
+       "feeds": []
+      },
+      {
+       "id": "m2-capture",
+       "title": "Lead capture into HubSpot",
+       "short": "Form → contact with source → instant text.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "andres"
+       ],
+       "mode": "auto",
+       "block": "",
+       "when": "",
+       "tool": "Zapier + HubSpot",
+       "feeds": [
+        "m5-plan"
+       ]
+      },
+      {
+       "id": "m2-review",
+       "title": "Weekly ad review",
+       "short": "Kill, keep or scale based on meetings booked.",
+       "detail": "",
+       "freq": "weekly",
+       "owners": [
+        "andres"
+       ],
+       "mode": "hybrid",
+       "block": "",
+       "when": "Monday",
+       "tool": "Claude + Windsor.ai",
+       "feeds": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "m3",
+   "dept": "ms",
+   "code": "M3",
+   "name": "Prospect research",
+   "short": "Find and qualify contractors before anyone reaches out.",
+   "cadence": "Daily",
+   "stages": [
+    {
+     "id": "m3a",
+     "name": "Research",
+     "when": "Daily",
+     "steps": [
+      {
+       "id": "m3-list",
+       "title": "Build today's prospect list",
+       "short": "Roofers, remodelers, builders, HVAC in metro Atlanta.",
+       "detail": "",
+       "freq": "daily",
+       "owners": [
+        "va"
+       ],
+       "mode": "hybrid",
+       "block": "morning",
+       "when": "",
+       "tool": "Google Maps + Instagram + Claude",
+       "feeds": []
+      },
+      {
+       "id": "m3-enrich",
+       "title": "Enrich and add to HubSpot",
+       "short": "Owner name, phone, Instagram, reviews, website.",
+       "detail": "",
+       "freq": "daily",
+       "owners": [
+        "va"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "",
+       "tool": "HubSpot",
+       "feeds": []
+      },
+      {
+       "id": "m3-tier",
+       "title": "Tag fit and tier",
+       "short": "Average job value, weak social, active jobs.",
+       "detail": "",
+       "freq": "daily",
+       "owners": [
+        "va"
+       ],
+       "mode": "hybrid",
+       "block": "",
+       "when": "",
+       "tool": "HubSpot",
+       "feeds": []
+      },
+      {
+       "id": "m3-ready",
+       "title": "Hand off the warm-up list",
+       "short": "New contacts set to Next Action: WARM UP for tomorrow.",
+       "detail": "",
+       "freq": "daily",
+       "owners": [
+        "va"
+       ],
+       "mode": "manual",
+       "block": "close",
+       "when": "",
+       "tool": "HubSpot",
+       "feeds": [
+        "m4-warm"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "m4",
+   "dept": "ms",
+   "code": "M4",
+   "name": "Outreach (DM → call → SMS)",
+   "short": "The daily touch sequence that books meetings.",
+   "cadence": "Daily",
+   "stages": [
+    {
+     "id": "m4a",
+     "name": "Sequence",
+     "when": "Day 1 → Day 4",
+     "steps": [
+      {
+       "id": "m4-warm",
+       "title": "Warm up + first DM",
+       "short": "Like 2 posts, leave 1 comment, send the first DM.",
+       "detail": "",
+       "freq": "daily",
+       "owners": [
+        "va"
+       ],
+       "mode": "manual",
+       "block": "morning",
+       "when": "Day 1",
+       "tool": "Instagram",
+       "feeds": []
+      },
+      {
+       "id": "m4-dmfu",
+       "title": "DM follow-up",
+       "short": "Second DM; then set COLD CALL for tomorrow.",
+       "detail": "",
+       "freq": "daily",
+       "owners": [
+        "va"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "Day 2",
+       "tool": "Instagram + HubSpot",
+       "feeds": []
+      },
+      {
+       "id": "m4-call",
+       "title": "Cold call block",
+       "short": "Book the in-person meeting; no price talk on the call.",
+       "detail": "",
+       "freq": "daily",
+       "owners": [
+        "andres"
+       ],
+       "mode": "manual",
+       "block": "morning",
+       "when": "Day 3 · 8 am–4 pm",
+       "tool": "QUO + HubSpot",
+       "feeds": []
+      },
+      {
+       "id": "m4-vm",
+       "title": "Voicemail + SMS",
+       "short": "No answer → voicemail and a short text.",
+       "detail": "",
+       "freq": "daily",
+       "owners": [
+        "andres"
+       ],
+       "mode": "hybrid",
+       "block": "",
+       "when": "Same day",
+       "tool": "QUO",
+       "feeds": []
+      },
+      {
+       "id": "m4-log",
+       "title": "Log every outcome",
+       "short": "Call result, next action and date in HubSpot.",
+       "detail": "",
+       "freq": "daily",
+       "owners": [
+        "andres",
+        "va"
+       ],
+       "mode": "manual",
+       "block": "close",
+       "when": "",
+       "tool": "HubSpot",
+       "feeds": [
+        "m5-plan"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "m5",
+   "dept": "ms",
+   "code": "M5",
+   "name": "CRM & pipeline",
+   "short": "HubSpot is the source of truth for every lead and deal.",
+   "cadence": "Daily + weekly",
+   "stages": [
+    {
+     "id": "m5a",
+     "name": "Pipeline",
+     "when": "Daily",
+     "steps": [
+      {
+       "id": "m5-plan",
+       "title": "Morning action plan",
+       "short": "Prioritized list: money, clients, win-back, cold block.",
+       "detail": "",
+       "freq": "daily",
+       "owners": [
+        "andres"
+       ],
+       "mode": "auto",
+       "block": "morning",
+       "when": "",
+       "tool": "Claude scheduled task (6:35 am)",
+       "feeds": []
+      },
+      {
+       "id": "m5-stages",
+       "title": "Move deals through stages",
+       "short": "Contacted → meeting → proposal → won/lost.",
+       "detail": "",
+       "freq": "daily",
+       "owners": [
+        "andres"
+       ],
+       "mode": "manual",
+       "block": "close",
+       "when": "",
+       "tool": "HubSpot",
+       "feeds": [
+        "m6-confirm"
+       ]
+      },
+      {
+       "id": "m5-overdue",
+       "title": "Clear overdue tasks",
+       "short": "Nothing older than 7 days without a next action.",
+       "detail": "",
+       "freq": "weekly",
+       "owners": [
+        "va"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "Friday",
+       "tool": "HubSpot",
+       "feeds": []
+      },
+      {
+       "id": "m5-review",
+       "title": "Pipeline review",
+       "short": "Deals, meetings booked, close rate; in the founder meeting.",
+       "detail": "",
+       "freq": "weekly",
+       "owners": [
+        "andres",
+        "esteban"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "Monday founder meeting",
+       "tool": "",
+       "feeds": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "m6",
+   "dept": "ms",
+   "code": "M6",
+   "name": "Meetings & closing",
+   "short": "In-person meeting to signed client.",
+   "cadence": "Per meeting",
+   "stages": [
+    {
+     "id": "m6a",
+     "name": "Close",
+     "when": "Per meeting",
+     "steps": [
+      {
+       "id": "m6-confirm",
+       "title": "Confirm the meeting",
+       "short": "Text 24 h and 2 h before, with address and agenda.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "andres"
+       ],
+       "mode": "auto",
+       "block": "",
+       "when": "",
+       "tool": "QUO + Zapier",
+       "feeds": []
+      },
+      {
+       "id": "m6-prep",
+       "title": "Meeting prep",
+       "short": "Audit their social, Google and AI visibility first.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "andres"
+       ],
+       "mode": "hybrid",
+       "block": "",
+       "when": "",
+       "tool": "Claude (call prep)",
+       "feeds": []
+      },
+      {
+       "id": "m6-meet",
+       "title": "In-person meeting",
+       "short": "On site; show the system; free video offer when it fits.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "andres",
+        "esteban"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "",
+       "tool": "",
+       "feeds": []
+      },
+      {
+       "id": "m6-proposal",
+       "title": "Plan + proposal same day",
+       "short": "Tailored plan with the package that fits.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "andres"
+       ],
+       "mode": "hybrid",
+       "block": "",
+       "when": "",
+       "tool": "Claude + AG proposal template",
+       "feeds": []
+      },
+      {
+       "id": "m6-fu",
+       "title": "Follow up until a decision",
+       "short": "Day 1, 3, 7, then monthly.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "andres"
+       ],
+       "mode": "hybrid",
+       "block": "",
+       "when": "",
+       "tool": "HubSpot sequence",
+       "feeds": []
+      },
+      {
+       "id": "m6-won",
+       "title": "Won → contract + first payment",
+       "short": "Kicks off Contracts, Billing and Onboarding.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "andres"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "",
+       "tool": "",
+       "feeds": [
+        "f3-send",
+        "f1-first",
+        "o1-form"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "m7",
+   "dept": "ms",
+   "code": "M7",
+   "name": "Referrals & past clients",
+   "short": "Warm relationships — where most retainers come from.",
+   "cadence": "Daily habit + monthly batch",
+   "stages": [
+    {
+     "id": "m7a",
+     "name": "Warm loop",
+     "when": "Daily + monthly",
+     "steps": [
+      {
+       "id": "m7-checkin",
+       "title": "2–3 personal check-ins",
+       "short": "Comment, congrats or a 'saw your post' DM. No pitch.",
+       "detail": "",
+       "freq": "daily",
+       "owners": [
+        "andres"
+       ],
+       "mode": "manual",
+       "block": "close",
+       "when": "",
+       "tool": "Instagram / text",
+       "feeds": []
+      },
+      {
+       "id": "m7-reply",
+       "title": "Same-day reply to referrals",
+       "short": "Warm leads go cold fastest when they wait.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "andres"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "",
+       "tool": "",
+       "feeds": []
+      },
+      {
+       "id": "m7-email",
+       "title": "Past-customer email",
+       "short": "One useful email a month to past clients.",
+       "detail": "",
+       "freq": "monthly",
+       "owners": [
+        "andres"
+       ],
+       "mode": "hybrid",
+       "block": "",
+       "when": "",
+       "tool": "HubSpot email + Claude",
+       "feeds": []
+      },
+      {
+       "id": "m7-ask",
+       "title": "Referral + testimonial ask",
+       "short": "At 90 days happy: ask for a referral and a video testimonial.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "esteban"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "Client at 90 days",
+       "tool": "",
+       "feeds": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "o1",
+   "dept": "ops",
+   "code": "O1",
+   "name": "Client onboarding",
+   "short": "From signed to first content live.",
+   "cadence": "Per new client",
+   "stages": [
+    {
+     "id": "o1a",
+     "name": "Week 1 → week 4",
+     "when": "Per new client",
+     "steps": [
+      {
+       "id": "o1-form",
+       "title": "Intake form",
+       "short": "Tally form: brand, goals, accesses, contacts.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "esteban"
+       ],
+       "mode": "auto",
+       "block": "",
+       "when": "",
+       "tool": "Tally",
+       "feeds": []
+      },
+      {
+       "id": "o1-welcome",
+       "title": "Welcome + kickoff booked",
+       "short": "Welcome message and kickoff date in week 1.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "esteban"
+       ],
+       "mode": "hybrid",
+       "block": "",
+       "when": "",
+       "tool": "QUO + Calendly",
+       "feeds": []
+      },
+      {
+       "id": "o1-access",
+       "title": "Collect accesses",
+       "short": "Meta, Google Business, website, Drive folders.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "isabella"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "",
+       "tool": "",
+       "feeds": []
+      },
+      {
+       "id": "o1-kickoff",
+       "title": "In-person kickoff",
+       "short": "Approve the content plan; one client point of contact.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "andres",
+        "esteban"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "Week 1",
+       "tool": "",
+       "feeds": []
+      },
+      {
+       "id": "o1-guide",
+       "title": "Brand guideline + Claude Project",
+       "short": "Guideline written and loaded as the client's AI knowledge.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "isabella"
+       ],
+       "mode": "hybrid",
+       "block": "",
+       "when": "",
+       "tool": "Notion + Claude Project",
+       "feeds": []
+      },
+      {
+       "id": "o1-tools",
+       "title": "Lead tools setup",
+       "short": "Booking page, client number, review texts.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "andres"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "Weeks 1–2",
+       "tool": "",
+       "feeds": [
+        "o2-map"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "o2",
+   "dept": "ops",
+   "code": "O2",
+   "name": "Retainer system",
+   "short": "The 6 systems every retainer runs on — full detail in the Retainer map.",
+   "cadence": "Monthly per client",
+   "link": "https://claude.ai/artifact/VF9pi4oLiRqVMK3wnq12up",
+   "sub": [
+    {
+     "code": "1",
+     "name": "Content & strategy",
+     "short": "Data → ideas → scripts → shoot → edit → QC.",
+     "cadence": "Monthly cycle",
+     "owners": [
+      "isabella",
+      "andres"
+     ]
+    },
+    {
+     "code": "2",
+     "name": "Social media management",
+     "short": "Scheduling, Google Business, stories.",
+     "cadence": "Daily",
+     "owners": [
+      "isabella"
+     ]
+    },
+    {
+     "code": "3",
+     "name": "Lead & reputation automation",
+     "short": "Booking page, reviews, lead intake.",
+     "cadence": "Always on",
+     "owners": [
+      "andres",
+      "isabella"
+     ]
+    },
+    {
+     "code": "4",
+     "name": "Boosting",
+     "short": "Weekly local boosts of top content.",
+     "cadence": "Weekly",
+     "owners": [
+      "isabella"
+     ]
+    },
+    {
+     "code": "5",
+     "name": "Ad creatives & A/B tests",
+     "short": "Growth: 10 ads, weekly kill/keep/scale.",
+     "cadence": "Monthly + weekly",
+     "owners": [
+      "isabella",
+      "andres"
+     ]
+    },
+    {
+     "code": "6",
+     "name": "Lead management & appointments",
+     "short": "Growth: speed to lead, book, hand over.",
+     "cadence": "Real time",
+     "owners": [
+      "andres"
+     ]
+    }
+   ],
+   "stages": [
+    {
+     "id": "o2a",
+     "name": "Running it each month",
+     "when": "Monthly per client",
+     "steps": [
+      {
+       "id": "o2-map",
+       "title": "Create each client's monthly map",
+       "short": "Copy from the template; set the days for each system.",
+       "detail": "",
+       "freq": "monthly",
+       "owners": [
+        "isabella"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "Week 4, ~15 days ahead",
+       "tool": "Retainer map + Notion calendar",
+       "feeds": [
+        "p2-days"
+       ]
+      },
+      {
+       "id": "o2-approve",
+       "title": "Founders approve direction",
+       "short": "Strategy per retainer, about 5 minutes each.",
+       "detail": "",
+       "freq": "weekly",
+       "owners": [
+        "andres",
+        "esteban"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "Monday founder meeting",
+       "tool": "",
+       "feeds": []
+      },
+      {
+       "id": "o2-kpi",
+       "title": "Weekly KPIs per retainer",
+       "short": "Leads, followers, production days, content ready 15 days early.",
+       "detail": "",
+       "freq": "weekly",
+       "owners": [
+        "isabella"
+       ],
+       "mode": "hybrid",
+       "block": "",
+       "when": "",
+       "tool": "Notion + Metricool",
+       "feeds": [
+        "c1-pull"
+       ]
+      },
+      {
+       "id": "o2-check",
+       "title": "Tick off systems done",
+       "short": "Every step on the monthly map marked done.",
+       "detail": "",
+       "freq": "daily",
+       "owners": [
+        "isabella"
+       ],
+       "mode": "manual",
+       "block": "close",
+       "when": "",
+       "tool": "Retainer map",
+       "feeds": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "o3",
+   "dept": "ops",
+   "code": "O3",
+   "name": "Reporting & check-ins",
+   "short": "Clients always know what's happening and what it earned.",
+   "cadence": "Weekly + monthly",
+   "stages": [
+    {
+     "id": "o3a",
+     "name": "Client updates",
+     "when": "Weekly + monthly",
+     "steps": [
+      {
+       "id": "o3-msgs",
+       "title": "Answer client messages",
+       "short": "Every client message answered the same day.",
+       "detail": "",
+       "freq": "daily",
+       "owners": [
+        "esteban"
+       ],
+       "mode": "manual",
+       "block": "close",
+       "when": "",
+       "tool": "WhatsApp / text",
+       "feeds": []
+      },
+      {
+       "id": "o3-friday",
+       "title": "Friday client update",
+       "short": "Weekly briefing: what shipped, what's next — even with no news.",
+       "detail": "",
+       "freq": "weekly",
+       "owners": [
+        "esteban"
+       ],
+       "mode": "hybrid",
+       "block": "",
+       "when": "Friday · Client Day",
+       "tool": "Weekly client briefing page",
+       "feeds": []
+      },
+      {
+       "id": "o3-build",
+       "title": "Build monthly reports",
+       "short": "Sales first: leads, appointments, top posts and why.",
+       "detail": "",
+       "freq": "monthly",
+       "owners": [
+        "isabella"
+       ],
+       "mode": "hybrid",
+       "block": "",
+       "when": "Due the 1st",
+       "tool": "Metricool + Claude",
+       "feeds": []
+      },
+      {
+       "id": "o3-send",
+       "title": "Send monthly reports",
+       "short": "Short note plus the report link.",
+       "detail": "",
+       "freq": "monthly",
+       "owners": [
+        "esteban"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "1st–2nd",
+       "tool": "",
+       "feeds": []
+      },
+      {
+       "id": "o3-growth",
+       "title": "Growth 15-day report",
+       "short": "Spend, appointments, cost per appointment, what we cut.",
+       "detail": "",
+       "freq": "15days",
+       "owners": [
+        "isabella",
+        "esteban"
+       ],
+       "mode": "hybrid",
+       "block": "",
+       "when": "",
+       "tool": "Claude + Windsor.ai + HubSpot",
+       "feeds": []
+      },
+      {
+       "id": "o3-call",
+       "title": "15-minute monthly check-in",
+       "short": "Results, next month's plan and why.",
+       "detail": "",
+       "freq": "monthly",
+       "owners": [
+        "esteban"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "",
+       "tool": "",
+       "feeds": [
+        "o4-score"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "o4",
+   "dept": "ops",
+   "code": "O4",
+   "name": "Client health & renewals",
+   "short": "Spot unhappy clients early; renew and upsell happy ones.",
+   "cadence": "Weekly",
+   "stages": [
+    {
+     "id": "o4a",
+     "name": "Health loop",
+     "when": "Weekly",
+     "steps": [
+      {
+       "id": "o4-score",
+       "title": "Client opportunity report",
+       "short": "Health score, risks and upsell openings per client.",
+       "detail": "",
+       "freq": "weekly",
+       "owners": [
+        "andres"
+       ],
+       "mode": "auto",
+       "block": "morning",
+       "when": "Monday morning",
+       "tool": "Claude scheduled task",
+       "feeds": []
+      },
+      {
+       "id": "o4-recover",
+       "title": "Recovery call for at-risk clients",
+       "short": "Same week a client turns yellow or red.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "esteban"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "",
+       "tool": "",
+       "feeds": []
+      },
+      {
+       "id": "o4-refresh",
+       "title": "Quarterly guideline refresh",
+       "short": "New story style, edit style, fonts, trends.",
+       "detail": "",
+       "freq": "quarterly",
+       "owners": [
+        "isabella"
+       ],
+       "mode": "hybrid",
+       "block": "",
+       "when": "",
+       "tool": "Claude + Notion",
+       "feeds": []
+      },
+      {
+       "id": "o4-renew",
+       "title": "Renewal conversation",
+       "short": "Before the 3-month minimum ends; propose the next level.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "andres",
+        "esteban"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "Month 3",
+       "tool": "",
+       "feeds": [
+        "m7-ask"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "o5",
+   "dept": "ops",
+   "code": "O5",
+   "name": "Offboarding",
+   "short": "Leave on good terms so clients come back or refer.",
+   "cadence": "Per exit",
+   "stages": [
+    {
+     "id": "o5a",
+     "name": "Exit",
+     "when": "Per exit",
+     "steps": [
+      {
+       "id": "o5-final",
+       "title": "Final deliverables",
+       "short": "Everything owed is delivered before the last day.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "isabella"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "",
+       "tool": "",
+       "feeds": []
+      },
+      {
+       "id": "o5-hand",
+       "title": "Hand back accesses + files",
+       "short": "Remove AG from accounts; share the final Drive folder.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "esteban"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "",
+       "tool": "",
+       "feeds": []
+      },
+      {
+       "id": "o5-exit",
+       "title": "Exit survey",
+       "short": "Why they left, what to fix. Feeds the quarterly review.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "esteban"
+       ],
+       "mode": "hybrid",
+       "block": "",
+       "when": "",
+       "tool": "Tally",
+       "feeds": []
+      },
+      {
+       "id": "o5-winback",
+       "title": "Mark as win-back in HubSpot",
+       "short": "Check in again in 90 days.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "andres"
+       ],
+       "mode": "auto",
+       "block": "",
+       "when": "",
+       "tool": "HubSpot",
+       "feeds": [
+        "m7-checkin"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p1",
+   "dept": "pm",
+   "code": "P1",
+   "name": "AG Visuals — one-off projects",
+   "branch": "AG Visuals branch",
+   "short": "Real estate shoots and other one-off projects, order to delivery.",
+   "cadence": "Per order",
+   "stages": [
+    {
+     "id": "p1a",
+     "name": "Order → shoot",
+     "when": "Per order",
+     "steps": [
+      {
+       "id": "p1-inbox",
+       "title": "Check new orders + reschedules",
+       "short": "New portal orders, weather moves, agent messages.",
+       "detail": "",
+       "freq": "daily",
+       "owners": [
+        "isabella"
+       ],
+       "mode": "manual",
+       "block": "morning",
+       "when": "",
+       "tool": "Aryeo + WhatsApp",
+       "feeds": []
+      },
+      {
+       "id": "p1-order",
+       "title": "Order received",
+       "short": "Booking portal or email; past customers entered in Aryeo.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "isabella"
+       ],
+       "mode": "hybrid",
+       "block": "",
+       "when": "",
+       "tool": "Booking portal + Aryeo",
+       "feeds": []
+      },
+      {
+       "id": "p1-sched",
+       "title": "Schedule the shoot",
+       "short": "Check sun and weather; set the time with the agent.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "isabella"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "",
+       "tool": "WhatsApp + calendar",
+       "feeds": []
+      },
+      {
+       "id": "p1-shoot",
+       "title": "Shoot photos, video, 3D",
+       "short": "Pick the video song; upload to the RE folder.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "andres",
+        "esteban"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "",
+       "tool": "",
+       "feeds": []
+      },
+      {
+       "id": "p1-3d",
+       "title": "3D tour to CLO",
+       "short": "Goes straight to the 3D provider.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "esteban"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "",
+       "tool": "",
+       "feeds": []
+      }
+     ]
+    },
+    {
+     "id": "p1b",
+     "name": "Edit → deliver",
+     "when": "Within 24–48 h",
+     "steps": [
+      {
+       "id": "p1-edit",
+       "title": "Editing",
+       "short": "Exteriors to the RE editor, interiors HDR + AI, video to the video editor.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "isabella",
+        "editor"
+       ],
+       "mode": "hybrid",
+       "block": "",
+       "when": "",
+       "tool": "",
+       "feeds": []
+      },
+      {
+       "id": "p1-qc",
+       "title": "Founder approval",
+       "short": "Preview link to founders before delivery.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "isabella",
+        "andres",
+        "esteban"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "",
+       "tool": "",
+       "feeds": []
+      },
+      {
+       "id": "p1-deliver",
+       "title": "Deliver via Aryeo",
+       "short": "Organized delivery to the agent.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "isabella"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "",
+       "tool": "Aryeo",
+       "feeds": [
+        "f1-check"
+       ]
+      },
+      {
+       "id": "p1-rebook",
+       "title": "Repeat-booking DMs",
+       "short": "Keep repeat agents booking (AGPARTNERS).",
+       "detail": "",
+       "freq": "daily",
+       "owners": [
+        "va"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "",
+       "tool": "AG Visuals Instagram",
+       "feeds": []
+      }
+     ]
+    },
+    {
+     "id": "p1c",
+     "name": "Other one-off projects",
+     "when": "Per project",
+     "steps": [
+      {
+       "id": "p1-gen",
+       "title": "Track on the General Calendar",
+       "short": "Each stage with its owner: filming, editing, delivery.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "isabella"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "",
+       "tool": "Notion General Calendar",
+       "feeds": []
+      },
+      {
+       "id": "p1-genqc",
+       "title": "Deliver + invoice",
+       "short": "Same QC and billing as everything else.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "esteban"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "",
+       "tool": "",
+       "feeds": [
+        "f1-first"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "dept": "pm",
+   "code": "P2",
+   "name": "Retainer production",
+   "short": "Shoot days, editing and QC so content is ready 15 days early.",
+   "cadence": "Monthly cycle",
+   "stages": [
+    {
+     "id": "p2a",
+     "name": "Production",
+     "when": "Week 4 of M-2 → day 15 of M-1",
+     "steps": [
+      {
+       "id": "p2-days",
+       "title": "Set shoot days",
+       "short": "Max ~3 production days per retainer, set ahead.",
+       "detail": "",
+       "freq": "monthly",
+       "owners": [
+        "isabella"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "~15 days ahead",
+       "tool": "Notion calendar",
+       "feeds": []
+      },
+      {
+       "id": "p2-brief",
+       "title": "Shoot brief",
+       "short": "Every piece, shots, people, access, weather backup.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "isabella"
+       ],
+       "mode": "auto",
+       "block": "",
+       "when": "",
+       "tool": "Claude skill + Notion",
+       "feeds": []
+      },
+      {
+       "id": "p2-shoot",
+       "title": "Shoot day",
+       "short": "Brief order; 3 hook takes for every ad; B-roll library.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "esteban",
+        "shooter"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "",
+       "tool": "",
+       "feeds": []
+      },
+      {
+       "id": "p2-upload",
+       "title": "Upload within 24 h",
+       "short": "Named files; status flips to Shot.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "shooter"
+       ],
+       "mode": "hybrid",
+       "block": "",
+       "when": "",
+       "tool": "Drive + Zapier",
+       "feeds": []
+      },
+      {
+       "id": "p2-cull",
+       "title": "Culling + selects",
+       "short": "Best takes and hook take for the editor.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "isabella"
+       ],
+       "mode": "hybrid",
+       "block": "",
+       "when": "",
+       "tool": "Claude + transcripts",
+       "feeds": []
+      },
+      {
+       "id": "p2-edit",
+       "title": "Editing",
+       "short": "AI lane for simple formats; editors for hero pieces.",
+       "detail": "",
+       "freq": "weekly",
+       "owners": [
+        "editor",
+        "isabella"
+       ],
+       "mode": "hybrid",
+       "block": "",
+       "when": "",
+       "tool": "CapCut + Higgsfield",
+       "feeds": []
+      },
+      {
+       "id": "p2-qc",
+       "title": "QC 10-point check",
+       "short": "Pass = 9/10 before the client sees it.",
+       "detail": "",
+       "freq": "weekly",
+       "owners": [
+        "isabella"
+       ],
+       "mode": "hybrid",
+       "block": "",
+       "when": "",
+       "tool": "Notion + Claude pre-check",
+       "feeds": []
+      },
+      {
+       "id": "p2-rev",
+       "title": "Batched revisions",
+       "short": "Once a week, not as a daily drip.",
+       "detail": "",
+       "freq": "weekly",
+       "owners": [
+        "isabella",
+        "editor"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "Once a week",
+       "tool": "",
+       "feeds": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p3",
+   "dept": "pm",
+   "code": "P3",
+   "name": "Production calendar & capacity",
+   "short": "One calendar for every shoot and edit; know when to hire.",
+   "cadence": "Daily check + weekly",
+   "stages": [
+    {
+     "id": "p3a",
+     "name": "Capacity",
+     "when": "Daily + weekly",
+     "steps": [
+      {
+       "id": "p3-today",
+       "title": "Today's production check",
+       "short": "Shoots, edits due, anything blocked.",
+       "detail": "",
+       "freq": "daily",
+       "owners": [
+        "isabella"
+       ],
+       "mode": "manual",
+       "block": "morning",
+       "when": "",
+       "tool": "Notion General Calendar",
+       "feeds": []
+      },
+      {
+       "id": "p3-week",
+       "title": "Weekly capacity check",
+       "short": "Shoot days, editor load, deadlines for the next 2 weeks.",
+       "detail": "",
+       "freq": "weekly",
+       "owners": [
+        "isabella",
+        "esteban"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "Monday",
+       "tool": "",
+       "feeds": []
+      },
+      {
+       "id": "p3-editors",
+       "title": "Editor scorecard",
+       "short": "On time, revisions, quality per editor.",
+       "detail": "",
+       "freq": "monthly",
+       "owners": [
+        "isabella"
+       ],
+       "mode": "hybrid",
+       "block": "",
+       "when": "",
+       "tool": "Notion",
+       "feeds": []
+      },
+      {
+       "id": "p3-hire",
+       "title": "Hiring trigger check",
+       "short": "When volume passes the written trigger, add help.",
+       "detail": "",
+       "freq": "quarterly",
+       "owners": [
+        "andres",
+        "esteban"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "",
+       "tool": "",
+       "feeds": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "f1",
+   "dept": "fin",
+   "code": "F1",
+   "name": "Billing",
+   "short": "Every client billed on time; every payment checked.",
+   "cadence": "Daily check + monthly",
+   "stages": [
+    {
+     "id": "f1a",
+     "name": "Billing",
+     "when": "Daily + monthly",
+     "steps": [
+      {
+       "id": "f1-check",
+       "title": "Check payments received",
+       "short": "Stripe and Zelle against what's owed today.",
+       "detail": "",
+       "freq": "daily",
+       "owners": [
+        "esteban"
+       ],
+       "mode": "manual",
+       "block": "morning",
+       "when": "",
+       "tool": "Stripe + Chase",
+       "feeds": []
+      },
+      {
+       "id": "f1-first",
+       "title": "First invoice (prorated)",
+       "short": "Sent when a client signs; scheduling starts after payment.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "esteban"
+       ],
+       "mode": "hybrid",
+       "block": "",
+       "when": "",
+       "tool": "Stripe",
+       "feeds": []
+      },
+      {
+       "id": "f1-auto",
+       "title": "Monthly retainer billing",
+       "short": "Auto-charge on the 1st for card clients.",
+       "detail": "",
+       "freq": "monthly",
+       "owners": [
+        "esteban"
+       ],
+       "mode": "auto",
+       "block": "",
+       "when": "1st",
+       "tool": "Stripe subscriptions",
+       "feeds": []
+      },
+      {
+       "id": "f1-late",
+       "title": "Late-payment reminders",
+       "short": "Day 3 reminder, day 7 call; pause work after 14 days.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "esteban"
+       ],
+       "mode": "hybrid",
+       "block": "",
+       "when": "",
+       "tool": "Stripe reminders",
+       "feeds": []
+      },
+      {
+       "id": "f1-growth",
+       "title": "Growth appointments invoice",
+       "short": "Qualified appointments counted at month end.",
+       "detail": "",
+       "freq": "monthly",
+       "owners": [
+        "andres"
+       ],
+       "mode": "hybrid",
+       "block": "",
+       "when": "Month end",
+       "tool": "HubSpot report + Stripe",
+       "feeds": [
+        "f2-rec"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "f2",
+   "dept": "fin",
+   "code": "F2",
+   "name": "Close & payouts",
+   "short": "Books closed and people paid on the 15th and last day.",
+   "cadence": "Every 15 days",
+   "stages": [
+    {
+     "id": "f2a",
+     "name": "Close",
+     "when": "15th + last day",
+     "steps": [
+      {
+       "id": "f2-log",
+       "title": "Update the job log",
+       "short": "Every retainer and one-off job with its category.",
+       "detail": "",
+       "freq": "weekly",
+       "owners": [
+        "esteban"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "",
+       "tool": "Job log",
+       "feeds": []
+      },
+      {
+       "id": "f2-rec",
+       "title": "Reconcile income and costs",
+       "short": "Stripe, Zelle and Chase against the job log.",
+       "detail": "",
+       "freq": "15days",
+       "owners": [
+        "esteban"
+       ],
+       "mode": "hybrid",
+       "block": "",
+       "when": "",
+       "tool": "Excel → automated sheet",
+       "feeds": []
+      },
+      {
+       "id": "f2-pay",
+       "title": "Payouts",
+       "short": "Shooters, editors, VA; mileage reimbursed in full.",
+       "detail": "",
+       "freq": "15days",
+       "owners": [
+        "esteban"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "",
+       "tool": "Zelle / Chase",
+       "feeds": []
+      },
+      {
+       "id": "f2-owner",
+       "title": "Owner split",
+       "short": "AG share first, then the owners' split.",
+       "detail": "",
+       "freq": "monthly",
+       "owners": [
+        "andres",
+        "esteban"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "",
+       "tool": "",
+       "feeds": []
+      },
+      {
+       "id": "f2-acct",
+       "title": "Send to accounting",
+       "short": "Statements and the job log for the books.",
+       "detail": "",
+       "freq": "monthly",
+       "owners": [
+        "esteban",
+        "acct"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "",
+       "tool": "",
+       "feeds": [
+        "c1-pull"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "f3",
+   "dept": "fin",
+   "code": "F3",
+   "name": "Contracts",
+   "short": "Every client and contractor on paper.",
+   "cadence": "Per client",
+   "stages": [
+    {
+     "id": "f3a",
+     "name": "Contracts",
+     "when": "Per client",
+     "steps": [
+      {
+       "id": "f3-send",
+       "title": "Send the contract",
+       "short": "From the template: package, 3-month minimum, approvals.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "andres"
+       ],
+       "mode": "hybrid",
+       "block": "",
+       "when": "",
+       "tool": "E-sign template",
+       "feeds": []
+      },
+      {
+       "id": "f3-store",
+       "title": "Store signed contract",
+       "short": "Saved to the client's folder and HubSpot.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "esteban"
+       ],
+       "mode": "auto",
+       "block": "",
+       "when": "",
+       "tool": "Drive + HubSpot",
+       "feeds": []
+      },
+      {
+       "id": "f3-dates",
+       "title": "Track minimums + renewal dates",
+       "short": "Flag clients 30 days before month 3.",
+       "detail": "",
+       "freq": "monthly",
+       "owners": [
+        "esteban"
+       ],
+       "mode": "hybrid",
+       "block": "",
+       "when": "",
+       "tool": "",
+       "feeds": [
+        "o4-renew"
+       ]
+      },
+      {
+       "id": "f3-team",
+       "title": "Contractor agreements",
+       "short": "Shooters, editors and VA: scope, rates, ownership of files.",
+       "detail": "",
+       "freq": "event",
+       "owners": [
+        "andres"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "",
+       "tool": "",
+       "feeds": []
+      },
+      {
+       "id": "f3-review",
+       "title": "Template review",
+       "short": "Update contracts when offers change.",
+       "detail": "",
+       "freq": "quarterly",
+       "owners": [
+        "andres"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "",
+       "tool": "",
+       "feeds": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c1",
+   "dept": "co",
+   "code": "C1",
+   "name": "Company scoreboard",
+   "short": "5 numbers every week: revenue, cash, active retainers, on-time delivery, new leads.",
+   "cadence": "Weekly",
+   "stages": [
+    {
+     "id": "c1a",
+     "name": "Rhythm",
+     "when": "Weekly + monthly",
+     "steps": [
+      {
+       "id": "c1-pull",
+       "title": "Pull the 5 KPIs",
+       "short": "Filled automatically from Stripe, HubSpot and Notion.",
+       "detail": "",
+       "freq": "weekly",
+       "owners": [
+        "andres"
+       ],
+       "mode": "auto",
+       "block": "",
+       "when": "Sunday night",
+       "tool": "Claude scheduled task",
+       "feeds": []
+      },
+      {
+       "id": "c1-founder",
+       "title": "Founder meeting",
+       "short": "Scoreboard, pipeline, client health, decisions.",
+       "detail": "",
+       "freq": "weekly",
+       "owners": [
+        "andres",
+        "esteban"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "Monday",
+       "tool": "",
+       "feeds": []
+      },
+      {
+       "id": "c1-team",
+       "title": "Monthly team meeting",
+       "short": "Wins, misses, next month's focus.",
+       "detail": "",
+       "freq": "monthly",
+       "owners": [
+        "andres",
+        "esteban",
+        "isabella"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "Last Friday",
+       "tool": "",
+       "feeds": []
+      },
+      {
+       "id": "c1-quarter",
+       "title": "Quarterly review",
+       "short": "What to change in offers and systems, from feedback.",
+       "detail": "",
+       "freq": "quarterly",
+       "owners": [
+        "andres",
+        "esteban"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "",
+       "tool": "",
+       "feeds": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "dept": "co",
+   "code": "C2",
+   "name": "AI agents & automations",
+   "short": "Every agent and automation running across AG, and who watches it.",
+   "cadence": "Always on",
+   "stages": [
+    {
+     "id": "c2a",
+     "name": "Running agents",
+     "when": "Always on",
+     "steps": [
+      {
+       "id": "c2-hub",
+       "title": "HubSpot morning plan",
+       "short": "Weekdays at 6:35 am.",
+       "detail": "",
+       "freq": "daily",
+       "owners": [
+        "andres"
+       ],
+       "mode": "auto",
+       "block": "",
+       "when": "",
+       "tool": "Claude scheduled task",
+       "feeds": []
+      },
+      {
+       "id": "c2-opp",
+       "title": "Client opportunity report",
+       "short": "Mondays.",
+       "detail": "",
+       "freq": "weekly",
+       "owners": [
+        "andres"
+       ],
+       "mode": "auto",
+       "block": "",
+       "when": "",
+       "tool": "Claude scheduled task",
+       "feeds": []
+      },
+      {
+       "id": "c2-metri",
+       "title": "Metricool → Notion results",
+       "short": "Daily sync of post results.",
+       "detail": "",
+       "freq": "daily",
+       "owners": [
+        "isabella"
+       ],
+       "mode": "auto",
+       "block": "",
+       "when": "",
+       "tool": "Claude scheduled task",
+       "feeds": []
+      },
+      {
+       "id": "c2-perf",
+       "title": "Monthly performance pull",
+       "short": "1st of each month, per retainer.",
+       "detail": "",
+       "freq": "monthly",
+       "owners": [
+        "isabella"
+       ],
+       "mode": "auto",
+       "block": "",
+       "when": "",
+       "tool": "Claude scheduled task",
+       "feeds": []
+      },
+      {
+       "id": "c2-review",
+       "title": "Check the agent log",
+       "short": "Anything failed or off? Fix or pause it.",
+       "detail": "",
+       "freq": "weekly",
+       "owners": [
+        "andres"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "Friday ops block",
+       "tool": "",
+       "feeds": []
+      },
+      {
+       "id": "c2-next",
+       "title": "Automate one more step",
+       "short": "Pick the next manual step on this map to hand to AI.",
+       "detail": "",
+       "freq": "monthly",
+       "owners": [
+        "andres"
+       ],
+       "mode": "manual",
+       "block": "",
+       "when": "",
+       "tool": "",
+       "feeds": []
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "flows": [
+  {
+   "from": "m3",
+   "to": "m4",
+   "label": "Warm-up list"
+  },
+  {
+   "from": "m4",
+   "to": "m5",
+   "label": "Outcomes"
+  },
+  {
+   "from": "m2",
+   "to": "m5",
+   "label": "Inbound leads"
+  },
+  {
+   "from": "m1",
+   "to": "m5",
+   "label": "DM leads"
+  },
+  {
+   "from": "m5",
+   "to": "m6",
+   "label": "Meeting booked"
+  },
+  {
+   "from": "m6",
+   "to": "o1",
+   "label": "Signed client"
+  },
+  {
+   "from": "m6",
+   "to": "f3",
+   "label": "Contract"
+  },
+  {
+   "from": "m6",
+   "to": "f1",
+   "label": "First payment"
+  },
+  {
+   "from": "o1",
+   "to": "o2",
+   "label": "Kickoff done"
+  },
+  {
+   "from": "o2",
+   "to": "p2",
+   "label": "Monthly plan"
+  },
+  {
+   "from": "p2",
+   "to": "o3",
+   "label": "Content live"
+  },
+  {
+   "from": "o3",
+   "to": "o4",
+   "label": "Results"
+  },
+  {
+   "from": "o4",
+   "to": "m7",
+   "label": "Happy client"
+  },
+  {
+   "from": "o5",
+   "to": "m7",
+   "label": "Win-back"
+  },
+  {
+   "from": "p1",
+   "to": "f1",
+   "label": "Paid order"
+  },
+  {
+   "from": "f1",
+   "to": "f2",
+   "label": "Payments"
+  },
+  {
+   "from": "f2",
+   "to": "c1",
+   "label": "Cash + revenue"
+  },
+  {
+   "from": "m5",
+   "to": "c1",
+   "label": "New leads"
+  }
+ ],
+ "updatedAt": 0
+}
